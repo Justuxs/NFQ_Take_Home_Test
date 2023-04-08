@@ -1,0 +1,5 @@
+.textarea-auto-grow textarea {
+    resize: none;
+    overflow: hidden;
+    min-height: 300px;
+}

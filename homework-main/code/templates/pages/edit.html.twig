@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block main %}
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light">Edit page</h1>
+            </div>
+        </div>
+    </section>
+    <main>
+        <div class="py-5 bg-light">
+            <div class="container">
+                {{ form_start(form) }}
+                <div class="my-custom-class-for-errors">
+                    {{ form_errors(form) }}
+                </div>
+
+                    <div class="row">
+                        {{ form_row(form.Title) }}
+                    </div>
+                    <div class="row" id="some-custom-id">
+                        {{ form_row(form.Image) }}
+                    </div>
+                    <div class="row textarea-big">
+                        {{ form_row(form.Text, {'attr': {'style': 'height: 500px'}}) }}
+
+                    </div>
+
+                {{ form_end(form) }}
+            </div>
+        </div>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <a href="{{ path('home') }}" type="button" class="btn btn-secondary btn-lg px-4 gap-3">Back</a>
+        </div>
+    </main>
+{% endblock %}
